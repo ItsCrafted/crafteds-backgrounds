@@ -6,8 +6,9 @@
     "build": "echo \"No build step yet\""
   },
   "dependencies": {
-    "three": "^0.181.2",
-    "postprocessing": "^6.38.0"
+    "@cloudflare/kv-asset-handler": "^0.4.1",
+    "postprocessing": "^6.38.0",
+    "three": "^0.181.2"
   },
   "keywords": [],
   "author": "Crafted",
