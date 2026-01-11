@@ -1,0 +1,5 @@
+name = "crafted-gamz"
+compatibility_date = "2026-01-11"
+
+[site]
+bucket = "."
