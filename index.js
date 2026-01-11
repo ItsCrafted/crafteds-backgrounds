@@ -1,11 +1,14 @@
-import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
-
 export default {
-  async fetch(event) {
+  async fetch(request) {
+    const url = new URL(request.url);
+    let path = url.pathname;
+    if (path === "/") path = "/index.html";
     try {
-      return await getAssetFromKV(event);
-    } catch (e) {
-      return await getAssetFromKV(event, { mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/index.html`, req) });
+      const response = await fetch(`${url.origin}${path}`);
+      if (!response.ok) throw new Error("File not found");
+      return response;
+    } catch (err) {
+      return fetch(`${url.origin}/index.html`);
     }
   },
 };
