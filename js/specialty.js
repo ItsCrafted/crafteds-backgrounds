@@ -45,7 +45,7 @@ function renderGames(gamesToRender) {
 
         gameBox.addEventListener('click', async () => {
             await trackGameClick(game.name);
-            window.location.href = `https://feature.cgamz.site/${game.id}.html`;
+            window.location.href = `https://features.cgamz.site/${game.id}.html`;
         });
         container.appendChild(gameBox);
     });
