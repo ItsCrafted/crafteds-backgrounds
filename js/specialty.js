@@ -1,6 +1,14 @@
 const games = [
     { id: 'zapper-v1', name: 'Extension Zapper v1',},
     { id: 'zapper-v2', name: 'Extension Zapper v2',},
+    { id: 'url-shortener', name: 'URL Shortener',},
+    { id: 'file-transfer', name: 'File Transfer',},
+    { id: 'ela-ai', name: 'Ela AI',},
+    { id: 'math-ai', name: 'Math AI',},
+    { id: 'cmesh', name: 'CMESH',},
+    { id: 'snyaptium', name: 'Snyaptium',},
+    { id: 'queryy', name: 'Queryy',},
+    { id: 'hyperspeed', name: 'Hyperspeed',},
 ];
 
 games.sort((a, b) => a.name.localeCompare(b.name));
